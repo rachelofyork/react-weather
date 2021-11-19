@@ -1,3 +1,9 @@
 ul {
   list-style: none;
 }
+
+.city {
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}

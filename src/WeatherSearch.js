@@ -10,6 +10,7 @@ export default function WeatherSearch() {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+        city: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
@@ -46,6 +47,7 @@ export default function WeatherSearch() {
       <div>
         {form}
         <ul>
+            <li className="city">{weather.city}</li>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>
@@ -60,3 +62,4 @@ export default function WeatherSearch() {
     return form;
   }
 }
+
